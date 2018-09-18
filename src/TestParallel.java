@@ -72,9 +72,9 @@ public class TestParallel {
             ArrayList<Float> timeArray = new ArrayList<>();
             ArrayList<Double> testing = new ArrayList<>();
             //Running the rogrma 5 times.
-            for(int r = 0 ; r<5 ;r++)
+            for(int r = 0 ; r<10 ;r++)
             {
-                if(r!=4){
+                if(r!=9){
                     tick();
                     testing = arrayOfTreeExposureSums(SUNLIGHT_VALUES, TREE_VALUES);
                     float time = tock();
@@ -92,7 +92,7 @@ public class TestParallel {
             }
             float TOTAL_ALL_RUNTIMES = 0;
             TOTAL_ALL_RUNTIMES = timeArray.stream().map((x) -> x).reduce(TOTAL_ALL_RUNTIMES, (accumulator, _item) -> accumulator + _item);
-            System.out.println("Average of all runtimes is: " +TOTAL_ALL_RUNTIMES/5);
+            System.out.println("Average of all runtimes is: " +TOTAL_ALL_RUNTIMES/10);
             
             double SUM_ALL_SUNLIGHT_COVER = 0.0;
             for (double y : testing) {

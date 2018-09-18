@@ -13,7 +13,7 @@ public class Parallel extends RecursiveTask<ArrayList<Double>> {
     private final Double[][] SUNLIGHT_VALUES;
     private final int hi;
     private final int lo;
-    static final int SEQUENTIAL_CUTOFF = 550000;
+    static final int SEQUENTIAL_CUTOFF = 800000;
 
     ArrayList<Double> treeExposure = new ArrayList<>();
 

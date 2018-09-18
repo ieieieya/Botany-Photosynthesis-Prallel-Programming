@@ -1,4 +1,4 @@
-//package botany;
+package botany;
 
 /**
  *
@@ -10,20 +10,30 @@ import java.io.*;
 public class TestSequential {
 
     private static long startTime = 0;
-
+    /**
+     * When called the timing of the program running starts.
+     */
     private static void tick() {
         startTime = System.currentTimeMillis();
     }
-
+    /**
+     * 
+     * @return the time taken
+     */
     private static float tock() {
         return (System.currentTimeMillis() - startTime) / 1000.0f;
     }
-
+    /**
+     * The args[0] is the name of the input file
+     * The args[1] is the name of the output file
+     * @param args 
+     */
     public static void main(String[] args) {
 
         try {
 
-            String inFile = args[0], outFile = args[1];
+            String inFile = args[0]; 
+            String outFile = args[1];
             Scanner scanner = new Scanner(new File(inFile));
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outFile));
 
@@ -45,7 +55,9 @@ public class TestSequential {
                     }
                 }
                 NUMBER_OF_TREES = scanner.nextInt();
-
+                System.gc();
+               
+                
                 tick();
                 for (int i = 0; i < NUMBER_OF_TREES; i++) {
                     int TREE_X = scanner.nextInt();
