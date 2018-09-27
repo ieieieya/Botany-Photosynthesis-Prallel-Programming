@@ -1,0 +1,2 @@
+# Botany-Photosynthesis-Prallel-Programming
+There is a branch of Botany that is concerned with simulating vegetation patterns using computerized models. This has implications for anticipating the effect that climate change will have on vegetation. These models scale in computational complexity with the size of the input terrain, which in some cases can span entire continents. They are therefore prime candidates for acceleration using parallel programming.
